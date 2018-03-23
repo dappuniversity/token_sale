@@ -474,7 +474,7 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 333,
+                                  "referencedDeclaration": 390,
                                   "type": "msg",
                                   "value": "msg"
                                 },
@@ -747,7 +747,7 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 336,
+                              "referencedDeclaration": 393,
                               "type": "function (bool) pure",
                               "value": "require"
                             },
@@ -1098,7 +1098,7 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 336,
+                              "referencedDeclaration": 393,
                               "type": "function (bool) pure",
                               "value": "require"
                             },
@@ -1139,7 +1139,7 @@
                                       "overloadedDeclarations": [
                                         null
                                       ],
-                                      "referencedDeclaration": 333,
+                                      "referencedDeclaration": 390,
                                       "type": "msg",
                                       "value": "msg"
                                     },
@@ -1266,7 +1266,7 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 336,
+                              "referencedDeclaration": 393,
                               "type": "function (bool) pure",
                               "value": "require"
                             },
@@ -1346,7 +1346,7 @@
                                       "overloadedDeclarations": [
                                         null
                                       ],
-                                      "referencedDeclaration": 346,
+                                      "referencedDeclaration": 403,
                                       "type": "contract DappTokenSale",
                                       "value": "this"
                                     },
@@ -1416,7 +1416,7 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 336,
+                              "referencedDeclaration": 393,
                               "type": "function (bool) pure",
                               "value": "require"
                             },
@@ -1497,7 +1497,7 @@
                                       "overloadedDeclarations": [
                                         null
                                       ],
-                                      "referencedDeclaration": 333,
+                                      "referencedDeclaration": 390,
                                       "type": "msg",
                                       "value": "msg"
                                     },
@@ -1648,7 +1648,7 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 333,
+                                  "referencedDeclaration": 390,
                                   "type": "msg",
                                   "value": "msg"
                                 },
@@ -1763,7 +1763,7 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 336,
+                              "referencedDeclaration": 393,
                               "type": "function (bool) pure",
                               "value": "require"
                             },
@@ -1804,7 +1804,7 @@
                                       "overloadedDeclarations": [
                                         null
                                       ],
-                                      "referencedDeclaration": 333,
+                                      "referencedDeclaration": 390,
                                       "type": "msg",
                                       "value": "msg"
                                     },
@@ -1874,7 +1874,7 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 336,
+                              "referencedDeclaration": 393,
                               "type": "function (bool) pure",
                               "value": "require"
                             },
@@ -2008,7 +2008,7 @@
                                       "overloadedDeclarations": [
                                         null
                                       ],
-                                      "referencedDeclaration": 346,
+                                      "referencedDeclaration": 403,
                                       "type": "contract DappTokenSale",
                                       "value": "this"
                                     },
@@ -2064,7 +2064,7 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 339,
+                              "referencedDeclaration": 396,
                               "type": "function (address)",
                               "value": "selfdestruct"
                             },
@@ -2121,6 +2121,11 @@
     "version": "0.4.18+commit.9cf6e910.Emscripten.clang"
   },
   "networks": {
+    "4": {
+      "events": {},
+      "links": {},
+      "address": "0x5407ad31f0461c6212ed567b01b69ece84894943"
+    },
     "5777": {
       "events": {},
       "links": {},
@@ -2128,5 +2133,5 @@
     }
   },
   "schemaVersion": "1.0.1",
-  "updatedAt": "2018-03-22T16:38:48.103Z"
+  "updatedAt": "2018-03-23T17:35:02.746Z"
 }
