@@ -19,7 +19,7 @@ App = {
       web3 = new Web3(web3.currentProvider);
     } else {
       // Specify default instance if no web3 instance provided
-      App.web3Provider = new Web3.providers.HttpProvider('http://localhost:7545');
+      App.web3Provider = new Web3.providers.HttpProvider('https://rinkeby.infura.io/v3/0355e3121736443fbd448ba440db9997');
       web3 = new Web3(App.web3Provider);
     }
     return App.initContracts();
