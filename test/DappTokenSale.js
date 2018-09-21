@@ -73,7 +73,7 @@ contract('DappTokenSale', function(accounts) {
       // Try to end sale from account other than the admin
       return tokenSaleInstance.endSale({ from: buyer });
     }).then(assert.fail).catch(function(error) {
-      assert(error.message.indexOf('revert' >= 0, 'must be admin to end sale'));
+      assert(error.message.indexOf('revert') >= 0, 'must be admin to end sale');
       // End sale as admin
       return tokenSaleInstance.endSale({ from: admin });
     }).then(function(receipt) {
