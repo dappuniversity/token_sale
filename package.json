@@ -12,9 +12,11 @@
   "author": "Gregory",
   "license": "ISC",
   "devDependencies": {
-    "lite-server": "^2.3.0"
+    "lite-server": "^2.5.3"
   },
   "dependencies": {
-    "truffle": "^5.0.21"
+    "mocha": "^6.1.4",
+    "truffle": "^5.0.21",
+    "web3": "^1.0.0-beta.55"
   }
 }
