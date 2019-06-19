@@ -15,6 +15,11 @@
     "lite-server": "^2.5.3"
   },
   "dependencies": {
+    "bip39": "^3.0.2",
+    "ethereumjs-tx": "^2.0.0",
+    "ethereumjs-util": "^6.1.0",
+    "ethereumjs-wallet": "^0.6.3",
+    "hdkey": "^1.1.1",
     "mocha": "^6.1.4",
     "truffle": "^5.0.21",
     "web3": "^1.0.0-beta.55"
