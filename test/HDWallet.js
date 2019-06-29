@@ -20,7 +20,7 @@ const addrNode = root.derive("m/44'/60'/0'/0"); // line1
 
 const ethUtil = require('ethereumjs-util');
 const pubKey = ethUtil.privateToPublic(addrNode._privateKey);
-console.log(`privateKey: ${addrNode._privateKey.toString('hex')}`);
+console.log(`\n\nprivateKey: ${addrNode._privateKey.toString('hex')}`);
 console.log(`pubKey: ${pubKey.toString('hex')}`);
 const addr = ethUtil.publicToAddress(pubKey).toString('hex');
 console.log(`addr: ${addr}`);
