@@ -1,9 +1,10 @@
 pragma solidity ^0.5.8;
 
 contract DappToken {
-    string  public name = "DApp Token";
-    string  public symbol = "DAPP";
-    string  public standard = "DApp Token v1.0";
+    string public constant name = "DApp Token";
+    string public constant symbol = "DAPP";
+    string public constant standard = "DApp Token v1.0";
+    uint8 public constant decimals = 18;
     uint256 public totalSupply;
 
     event Transfer(
