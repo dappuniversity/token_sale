@@ -16,8 +16,8 @@ contract DappTokenSale {
         tokenPrice = _tokenPrice;
     }
 
-    function multiply(uint x, uint y) internal pure returns (uint z) {
-        require(y == 0 || (z = x * y) / y == x);
+    function multiply(uint x, uint y) internal view returns (uint z) {
+        require(y == tokenPrice || (z = x * y) / y == x);
     }
 
     function buyTokens(uint256 _numberOfTokens) public payable {
