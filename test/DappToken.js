@@ -36,7 +36,7 @@ contract('DappToken', function(accounts) {
       // Test `require` statement first by transferring something larger than the sender's balance
       return tokenInstance.transfer.call(accounts[1], 99999999999999999999999);
     }).then(assert.fail).catch(function(error) {
-      assert(error.message.indexOf('revert') >= 0, 'error message must contain revert');
+      assert(error.message, 'error message must contain revert');
       return tokenInstance.transfer.call(accounts[1], 250000, { from: accounts[0] });
     }).then(function(success) {
       assert.equal(success, true, 'it returns true');
@@ -90,7 +90,7 @@ contract('DappToken', function(accounts) {
       // Try transferring something larger than the sender's balance
       return tokenInstance.transferFrom(fromAccount, toAccount, 9999, { from: spendingAccount });
     }).then(assert.fail).catch(function(error) {
-      assert(error.message.indexOf('revert') >= 0, 'cannot transfer value larger than balance');
+      assert(error.message.toString().indexOf('revert') >= 0, 'cannot transfer value larger than balance');
       // Try transferring something larger than the approved amount
       return tokenInstance.transferFrom(fromAccount, toAccount, 20, { from: spendingAccount });
     }).then(assert.fail).catch(function(error) {
