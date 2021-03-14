@@ -55,10 +55,10 @@ contract('DappTokenSale', function(accounts) {
       // Try to buy tokens different from the ether value
       return tokenSaleInstance.buyTokens(numberOfTokens, { from: buyer, value: 1 });
     }).then(assert.fail).catch(function(error) {
-      assert(error.message.indexOf('revert') >= 0, 'msg.value must equal number of tokens in wei');
-      return tokenSaleInstance.buyTokens(800000, { from: buyer, value: numberOfTokens * tokenPrice })
+      assert(error.toString().indexOf('revert') >= 0, 'msg.value must equal number of tokens in wei');
+      return tokenSaleInstance.buyTokens(800000, { from: buyer, value: numberOfTokens * tokenPrice });
     }).then(assert.fail).catch(function(error) {
-      assert(error.message.indexOf('revert') >= 0, 'cannot purchase more tokens than available');
+      assert(error.toString().indexOf('revert') >= 0, 'cannot purchase more tokens than available');
     });
   });
 
@@ -73,7 +73,7 @@ contract('DappTokenSale', function(accounts) {
       // Try to end sale from account other than the admin
       return tokenSaleInstance.endSale({ from: buyer });
     }).then(assert.fail).catch(function(error) {
-      assert(error.message.indexOf('revert' >= 0, 'must be admin to end sale'));
+      assert(error.toString().indexOf('revert' >= 0, 'must be admin to end sale'));
       // End sale as admin
       return tokenSaleInstance.endSale({ from: admin });
     }).then(function(receipt) {
@@ -81,8 +81,9 @@ contract('DappTokenSale', function(accounts) {
     }).then(function(balance) {
       assert.equal(balance.toNumber(), 999990, 'returns all unsold dapp tokens to admin');
       // Check that the contract has no balance
-      balance = web3.eth.getBalance(tokenSaleInstance.address)
-      assert.equal(balance.toNumber(), 0);
+      return web3.eth.getBalance(tokenSaleInstance.address);
+    }).then(function(balance) {
+      assert.equal(balance, 0);
     });
   });
 });
