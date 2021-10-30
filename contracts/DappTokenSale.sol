@@ -23,7 +23,7 @@ contract DappTokenSale {
 
     function buyTokens(uint256 _numberOfTokens) public payable {
         require(msg.value == multiply(_numberOfTokens, tokenPrice), 'msg.value must equal number of tokens in wei');
-        require(tokenContract.balanceOf(address(this)) >= _numberOfTokens, 'cannot purchase more tokens than available');
+        require(tokenContract.balanceOf(tokenContract.owner()) >= _numberOfTokens, 'cannot purchase more tokens than available');
         require(tokenContract.transfer(msg.sender, _numberOfTokens), 'Unable to send tokens');
         // emit Balance(address(this), _numberOfTokens);
 

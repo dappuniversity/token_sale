@@ -5,6 +5,7 @@ contract DappToken {
     string  public symbol = "DAPP";
     string  public standard = "DApp Token v1.0";
     uint256 public totalSupply = 75000;
+    address public owner;
 
     event Transfer(
         address indexed _from,
@@ -22,14 +23,15 @@ contract DappToken {
     mapping(address => mapping(address => uint256)) public allowance;
 
     constructor (uint256 _initialSupply) public {
-        balanceOf[msg.sender] = _initialSupply;
+        owner = msg.sender;
+        balanceOf[owner] = _initialSupply;
         totalSupply = _initialSupply;
     }
 
     function transfer(address _to, uint256 _value) public returns (bool success) {
-        require(balanceOf[msg.sender] >= _value, "Insufficient sender balance");
+        require(balanceOf[owner] >= _value, "Insufficient sender balance");
 
-        balanceOf[msg.sender] -= _value;
+        balanceOf[owner] -= _value;
         balanceOf[_to] += _value;
 
         emit Transfer(msg.sender, _to, _value);
